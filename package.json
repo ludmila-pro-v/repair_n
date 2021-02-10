@@ -1,0 +1,26 @@
+{
+  "name": "repair_n",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ludmila-pro-v/repair_n.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ludmila-pro-v/repair_n/issues"
+  },
+  "homepage": "https://github.com/ludmila-pro-v/repair_n#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "browsersync": "0.0.1-security"
+  }
+}
