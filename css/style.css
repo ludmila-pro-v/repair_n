@@ -444,6 +444,10 @@ template {
   margin: 0;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'FuturaBookC';
   font-size: 14px;
