@@ -366,9 +366,19 @@ template {
   text-transform: uppercase;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .button--primary {
   background-color: #E3B873;
   color: #ffffff;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  transition: box-shadow 0.3s;
+}
+
+.button--primary:hover {
+  box-shadow: none;
 }
 
 .button--outline {
@@ -410,6 +420,11 @@ template {
   margin-right: 35px;
 }
 
+.nav__item:hover {
+  color: #E3B873;
+  transition: 0.2s;
+}
+
 .phone {
   color: #E3B873;
 }
@@ -422,10 +437,21 @@ template {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 90px;
   background: #131313 url(../img/hero-bg.jpg) no-repeat center/cover;
   height: 100vh;
   color: #ffffff;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.7);
 }
 
 .hero__instagram {
@@ -451,8 +477,19 @@ template {
   color: #ffffff;
 }
 
+.hero__scroll-down:after {
+  content: '';
+  background: url("../img/arrow-down.svg") no-repeat center;
+  height: 30px;
+  width: 30px;
+  border: solid 2px #E3B873;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
 .hero__content {
   max-width: 670px;
+  position: relative;
 }
 
 .hero__text {
@@ -472,10 +509,21 @@ template {
 }
 
 .instagram__link {
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #E3B873;
   transform: rotate(90deg);
+  line-height: 0.8;
+}
+
+.instagram__link:after {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background-color: #E3B873;
+  margin-left: 8px;
 }
 
 .title {
