@@ -363,9 +363,13 @@ template {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
   font-family: 'FuturaBookC';
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .section-title {
@@ -395,6 +399,7 @@ body {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
+  font-size: 0.93rem;
 }
 
 .button:focus {
@@ -452,7 +457,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
-  margin-right: 35px;
+  margin-right: 2.2rem;
 }
 
 .nav__item:hover {
@@ -501,8 +506,8 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  min-width: 247px;
-  min-height: 97px;
+  min-width: 17.6rem;
+  min-height: 6.93rem;
   background-color: #131313;
   display: flex;
   align-items: center;
@@ -523,13 +528,14 @@ body {
 }
 
 .hero__content {
-  max-width: 670px;
+  margin-left: 4.28rem;
+  max-width: 47.85rem;
   position: relative;
 }
 
 .hero__text {
-  font-size: 22px;
-  max-width: 500px;
+  font-size: 1.57rem;
+  max-width: 35.71rem;
 }
 
 .hero__button {
@@ -565,10 +571,67 @@ body {
   margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 2.857rem;
   font-weight: 300;
 }
 
 .title--primary {
   color: #E3B873;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+  .nav__item {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero__instagram {
+    display: none;
+  }
+  .hero__content {
+    margin-left: 0;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .contacts__phone {
+    margin-right: 0;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .contacts__button {
+    display: none;
+  }
+  .title {
+    font-size: 1.91rem;
+  }
+  .hero__scroll-down {
+    display: none;
+  }
+  .hero__content {
+    max-width: 26.75rem;
+  }
+  .hero__text {
+    font-size: 1.5rem;
+    margin-bottom: 2.66rem;
+  }
+  .hero__button {
+    display: block;
+    width: 100%;
+    margin-bottom: 2.17rem;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-height: 540px) {
+  .hero__scroll-down {
+    display: none;
+  }
 }
