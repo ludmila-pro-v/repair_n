@@ -714,6 +714,8 @@ img {
 }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 199;
   left: 0;
@@ -726,6 +728,11 @@ img {
   align-items: center;
   justify-content: center;
   background-color: rgba(19, 19, 19, 0.6);
+}
+
+.modal--visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal__dialog {
