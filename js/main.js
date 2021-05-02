@@ -1,9 +1,13 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+/*document.addEventListener("DOMContentLoaded", function(event) { 
     const modal = document.querySelector('.modal');
     const modalBtn = document.querySelectorAll('[data-toggle=modal]');
     const closeBtn = document.querySelector('.modal__close');
     const switchModal = () => {
         modal.classList.toggle('modal--visible');
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('modal--visible');
     };
     
     modalBtn.forEach(element => {
@@ -11,4 +15,67 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     closeBtn.addEventListener('click', switchModal);
-  });
+
+    document.addEventListener('keydown', function(event) {
+        const key = event.key; // const {key} = event; in ES6+
+        if (key === "Escape") {
+            closeModal();
+        }
+    });
+
+
+});
+*/
+
+$(document).ready(function () {
+    var modal = $('.modal'),
+        modalBtn = $('[data-toggle=modal]'),
+        closeBtn = $('.modal__close'),
+        scrollup = $('.scrollup');
+
+    modalBtn.on('click', function () {
+        $(modal).toggleClass('modal--visible');
+    });
+
+    closeBtn.on('click', function () {
+        $(modal).toggleClass('modal--visible');
+    });
+
+    var block_show = null;
+ 
+    function scrollTracking(){
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+        var et = $('.design').offset().top;
+        var eh = $('.design').outerHeight();
+     
+        if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+            if (block_show == null || block_show == false) {
+                console.log('Блок active в области видимости');
+                $(scrollup).addClass('scrollup--visible');
+            }
+            block_show = true;
+        } else {
+            if (block_show == null || block_show == true) {
+                console.log('Блок active скрыт');
+                $(scrollup).removeClass('scrollup--visible');
+            }
+            block_show = false;
+        }
+    }
+     
+    $(window).scroll(function(){
+        scrollTracking();
+    });
+        
+    $(document).ready(function(){ 
+        scrollTracking();
+    });
+
+    $(function(){
+        $(scrollup).bind('click', function(e){
+            e.preventDefault();
+            $('body,html').animate({scrollTop: 0}, 400);    
+        });
+    });
+});

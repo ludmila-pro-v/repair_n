@@ -789,6 +789,23 @@ img {
   align-self: flex-end;
 }
 
+.scrollup {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 199;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollup--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px;
