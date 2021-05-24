@@ -1,61 +1,117 @@
 *, *:before, *:after
-    box-sizing: border-box
+  box-sizing: border-box
 html
-    font-size: 14px
+  font-size: 14px
 body
-    font-family: 'FuturaBookC'
-    font-size: 1rem
+  font-family: 'FuturaBookC'
+  font-size: 1rem
 .section
-    padding: 60px 0
-    &--dark
-        background-color: $dark
-        color: $light
-    &-title
-        text-align: center
-        &--left
-            text-align: left
-        &__image
-            display: flex
-            justify-content: center
-            align-items: center
-            &:before, &:after
-                content: ''
-                width: 32px
-                height: 2px
-                background-color: $primary
-                margin: 0 10px
-        &__heading
-            font-size: 1.43rem
-            text-transform: uppercase
-            font-family: 'Yeseva One', cursive
-            font-weight: 300
-            font-size: 20px
-            &--primary
-                color: $primary
-        &__word
-            display: flex
-            line-height: 138.6%
-            align-items: center
-            &::after
-                content: ''
-                width: 92px
-                height: 1px
-                background-color: $primary
-                margin-left: 2rem
-        &__text
-            font-size: 1.28rem
-            line-height: 2.07rem
-            max-width: 31.57rem
-        &__description
-            font-size: 1.25rem
-            margin: 1.5rem auto 2.7rem
-            padding: 0 1rem
-            line-height: 135.84%
-            max-width: 52.93rem
-            
+  padding: 60px 0
+  &--dark
+    background-color: $dark
+    color: $light
+  &-title
+    text-align: center
+    &--left
+      text-align: left
+    &__suptitle
+      font-weight: 500
+      font-size: 1.07rem
+      text-transform: uppercase
+      &--left
+        text-align: left
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &:before, &:after
+        content: ''
+        width: 32px
+        height: 2px
+        background-color: $primary
+        margin: 0 10px
+    &__heading
+      font-size: 1.43rem
+      text-transform: uppercase
+      font-family: 'Yeseva One', cursive
+      font-weight: 300
+      font-size: 20px
+      &--primary
+        color: $primary
+        margin-top: 0
+        margin-bottom: 0
+    &__word
+      display: flex
+      line-height: 138.6%
+      align-items: center
+      &::after
+        content: ''
+        width: 92px
+        height: 1px
+        background-color: $primary
+        margin-left: 2rem
+    &__work
+      margin-bottom: 6.57rem
+    &__text
+      margin-top: 2.43rem
+      margin-bottom: 2.6rem
+      font-size: 1.28rem
+      line-height: 2.07rem
+      max-width: 31.57rem
+    &__description
+      font-size: 1.25rem
+      margin: 1.5rem auto 2.7rem
+      padding: 0 1rem
+      line-height: 135.84%
+      max-width: 52.93rem
+
+.swiper
+  &-slide
+    display: flex
+    flex-wrap: wrap
+    &__image
+      height: 30rem
+    &__item
+      object-fit: cover
+    &__text
+      flex-basis: 50%
+      margin-top: 0
+      margin-bottom: 3.5rem
+    &__heading
+      margin-top: 0
+      font-size: 1.285rem
+      line-height: 1.78rem
+      font-family: 'Yeseva One', cursive
+      color: $primary
+      text-transform: uppercase
+      font-weight: 300
+      margin-bottom: 0.64rem
+    &__value
+      line-height: 1.42rem
+  &-pagination
+    &-bullet
+      background-color: rgba($light, 0.3)
+      &-active
+        background-color: $light
+  &-button
+    &-prev, &-next
+      top: auto
+      width: 42px
+      height: 13px
+      &::after
+        display: none
+    &-prev
+      left: 0
+      background: url('../img/arrow-prev.svg') no-repeat center
+    &-next
+      background: url('../img/arrow-next.svg') no-repeat center
+      
+.swiper-container-horizontal>.swiper-pagination-bullets
+  width: auto
+           
 
 img 
-    max-width: 100%
+  max-width: 100%
 
                 
             

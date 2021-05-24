@@ -42,14 +42,14 @@ $(document).ready(function () {
     });
 
     var block_show = null;
- 
-    function scrollTracking(){
+
+    function scrollTracking() {
         var wt = $(window).scrollTop();
         var wh = $(window).height();
         var et = $('.design').offset().top;
         var eh = $('.design').outerHeight();
-     
-        if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+
+        if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
             if (block_show == null || block_show == false) {
                 console.log('Блок active в области видимости');
                 $(scrollup).addClass('scrollup--visible');
@@ -63,38 +63,57 @@ $(document).ready(function () {
             block_show = false;
         }
     }
-     
-    $(window).scroll(function(){
-        scrollTracking();
-    });
-        
-    $(document).ready(function(){ 
+
+    $(window).scroll(function () {
         scrollTracking();
     });
 
-    $(function(){
-        $(scrollup).bind('click', function(e){
+    $(document).ready(function () {
+        scrollTracking();
+    });
+
+    $(function () {
+        $(scrollup).bind('click', function (e) {
             e.preventDefault();
-            $('body,html').animate({scrollTop: 0}, 400);    
+            $('body,html').animate({
+                scrollTop: 0
+            }, 400);
         });
     });
 
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper('.swiper-container', {
+
         loop: true,
+
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
-          },
+        },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
     });
 
     var next = $('.swiper-button-next');
     var prev = $('.swiper-button-prev');
     var bullets = $('.swiper-pagination');
+    var nextWork = $('.swiper-button-next-work');
+    var bulletsWork = $('.swiper-pagination-work');
 
-    next.css('left', prev.width() + 10 + bullets.width() + 10)
-    bullets.css('left', prev.width() + 10)
+    bullets.css('left', prev.width() + 10);
+    next.css('left', prev.width() + 10 + bullets.width() + 10);
+    bulletsWork.css('left', prev.width() + 10);
+    nextWork.css('left', prev.width() + 10 + bulletsWork.width() + 10);
+
+
 });
+
+var workNumbers = document.getElementsByClassName('work__number');
+var workSteps = document.getElementsByClassName('work__step');
+
+for (var i = 0; i < workNumbers.length; i++) {
+    workNumbers[i].innerHTML = i + 1 + "/6";
+    workSteps[i].setAttribute('id', '#workstep' + i);
+};
+
