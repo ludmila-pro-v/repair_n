@@ -106,8 +106,13 @@ $(document).ready(function () {
     bulletsWork.css('left', prev.width() + 10);
     nextWork.css('left', prev.width() + 10 + bulletsWork.width() + 10);
 
+    new WOW().init(); 
 
 });
+
+// $(function(){
+//     new WOW().init(); 
+// });
 
 var workNumbers = document.getElementsByClassName('work__number');
 var workSteps = document.getElementsByClassName('work__step');
@@ -115,5 +120,4 @@ var workSteps = document.getElementsByClassName('work__step');
 for (var i = 0; i < workNumbers.length; i++) {
     workNumbers[i].innerHTML = i + 1 + "/6";
     workSteps[i].setAttribute('id', '#workstep' + i);
-};
-
+}

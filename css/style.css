@@ -411,6 +411,10 @@ body {
   text-align: left;
 }
 
+.section-title--light {
+  color: #ffffff;
+}
+
 .section-title__suptitle {
   font-weight: 500;
   font-size: 1.07rem;
@@ -602,6 +606,10 @@ img {
 
 .input::placeholder {
   color: #ffffff;
+}
+
+.input--light {
+  color: #131313;
 }
 
 .policy__checkbox {
@@ -804,6 +812,94 @@ img {
 
 .projects {
   padding-top: 8.5rem;
+  padding-bottom: 30rem;
+}
+
+.control {
+  margin-top: -30rem;
+}
+
+.control__text {
+  max-width: 40rem;
+  margin: auto;
+  margin-bottom: 4.285rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.4rem;
+}
+
+.control__text::before {
+  content: '';
+  display: block;
+  margin: auto;
+  margin-bottom: 2.5rem;
+  width: 55px;
+  height: 2px;
+  border-radius: 30px;
+  background-color: #E3B873;
+}
+
+.control__video {
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-bottom: 4.428rem;
+  max-width: 58.357rem;
+  min-height: 31rem;
+  background: #131313 url("../img/video-mask.jpg") center no-repeat;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.control__video::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.control__section-title {
+  margin-bottom: 2.214rem;
+}
+
+.control__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto;
+}
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem;
+}
+
+.control__policy-label {
+  justify-content: center;
+}
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+}
+
+.control__input--light {
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+}
+
+.control__button {
+  padding: 1.285rem 4.785rem;
+}
+
+.control__label {
+  margin-bottom: -0.5rem;
+}
+
+.video__play {
+  position: relative;
+  margin: auto;
 }
 
 .types__section-title {
@@ -1034,6 +1130,10 @@ img {
     flex-direction: column;
     align-items: center;
   }
+  .types {
+    margin-top: -6.7rem;
+    background-color: #ffffff;
+  }
   .types__card {
     margin-bottom: 6.58rem;
   }
@@ -1054,6 +1154,33 @@ img {
   }
   .work {
     display: none;
+  }
+  .control {
+    margin-top: 0;
+    background-color: #131313;
+  }
+  .control__text {
+    color: #ffffff;
+    font-size: 1.28rem;
+    margin-bottom: 0;
+  }
+  .control__form {
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.07rem;
+  }
+  .control__input-group {
+    margin-top: 4.5rem;
+  }
+  .control__button {
+    order: 5;
+    margin-top: 4.4rem;
+  }
+  .control__policy {
+    margin-top: 0.5rem;
+  }
+  .control__policy-label {
+    justify-content: start;
   }
 }
 
